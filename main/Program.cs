@@ -11,7 +11,9 @@ namespace main
         static void Main(string[] args)
         {
             //new opdracht1().Start();
-            new opdracht2().Start();
+            //new opdracht2().Start();
+            new opdracht3().Start();
+
         }
     }
 }

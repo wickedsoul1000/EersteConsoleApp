@@ -49,6 +49,9 @@
     <Compile Include="..\opdrachten\opdracht1.cs">
       <Link>opdracht1.cs</Link>
     </Compile>
+    <Compile Include="..\opdrachten\opdracht3.cs">
+      <Link>opdracht3.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

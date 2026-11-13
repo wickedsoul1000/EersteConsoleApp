@@ -13,10 +13,20 @@ namespace main
         {
 
             string weather;
+            string retry;
             string celsius;
 
             Console.WriteLine("you wake up and ask your mother: goodMorning mom, how is the weather today? (sunny,rainy or cloudy)");
             weather = Console.ReadLine().ToLower();
+
+            do
+            {
+                if (weather != "sunny" || weather != "rainy" || weather != "cloudy") {
+                    Console.WriteLine("choose between the given weather choises");
+                    return;
+                }
+            }
+            while (weather != "sunny" || weather != "rainy" || weather != "cloudy");
 
             Console.WriteLine($"its {weather} today");
 
@@ -25,7 +35,7 @@ namespace main
                 return;
             }
 
-            if (weather == "cloudy") {
+            if (weather == "cloudy") {  
                 Console.WriteLine("to bad i have to wear a jacket in this sad weather...");
             }
             if (weather == "sunny") {

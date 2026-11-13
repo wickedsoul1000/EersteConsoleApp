@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="opdracht1.cs" />
+    <Compile Include="..\opdrachten\opdracht2.cs">
+      <Link>opdracht2.cs</Link>
+    </Compile>
+    <Compile Include="..\opdrachten\opdracht1.cs">
+      <Link>opdracht1.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

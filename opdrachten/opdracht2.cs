@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace main
 {
-    internal class Class1
+    public class opdracht2
     {
+        public void Start() {
+            Console.WriteLine("yo");
+        
+        }
     }
 }

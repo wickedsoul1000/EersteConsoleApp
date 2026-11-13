@@ -13,10 +13,10 @@ namespace main
         {
 
             string weather;
-            string celsius
+            string celsius;
 
             Console.WriteLine("you wake up and ask your mother: goodMorning mom, how is the weather today? (sunny,rainy or cloudy)");
-            weather = Console.ReadLine();
+            weather = Console.ReadLine().ToLower();
 
             Console.WriteLine($"its {weather} today");
 
@@ -28,19 +28,24 @@ namespace main
             if (weather == "cloudy") {
                 Console.WriteLine("to bad i have to wear a jacket in this sad weather...");
             }
-            if (weather = "sunny") {
+            if (weather == "sunny") {
                 Console.WriteLine("ooh cool, and what is the tempeture? (in celsius you can just put the number(s) )");
                 int temp;
+                celsius = Console.ReadLine();
 
-                if (!int.TryParse(tempStr, out, temp)) {
+                while (!int.TryParse(celsius, out temp)) {
+                    Console.WriteLine("temp has to be a number, try again");
+                    celsius = Console.ReadLine();
+                }
 
-                    do
-                    {
-                        Console.ReadLine("temp hes to be a number try again");
-                        celsius = Console.ReadLine();
-                    }
-                    while (!int.TryParse(tempStr, out, temp);
+                if (temp >= 20) {
+                    Console.WriteLine("its nice and warm don't forget sunscreen");
+                    return;
+                }
 
+                else if (temp <20) {
+                    Console.WriteLine("oh you still need to put a jacked on but dont forget sunscreen, to be sure you know?");
+                    return;
                 }
             }
         }

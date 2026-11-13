@@ -9,7 +9,17 @@ namespace main
     public class opdracht1
     {
        public void Start() {
-            Console.WriteLine("hello world!");
+            string naam;
+            string age;
+
+            Console.WriteLine("what is your name young man?");
+            naam = Console.ReadLine();
+
+            Console.WriteLine($"i see young traveler, your name is {naam}........ so........ what age are you young traveler?");
+            age = Console.ReadLine();
+
+            Console.WriteLine($"i see so you are {age} years old..... good");
+
 
         }
     }

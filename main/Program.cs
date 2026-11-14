@@ -12,8 +12,8 @@ namespace main
         {
             //new opdracht1().Start();
             //new opdracht2().Start();
-            new opdracht3().Start();
-            //new opdracht4().Start();
+            //new opdracht3().Start();
+            new opdracht4().Start();
 
         }
     }

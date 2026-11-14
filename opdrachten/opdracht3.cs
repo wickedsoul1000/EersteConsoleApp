@@ -13,7 +13,6 @@ namespace main
         {
 
             string weather;
-            string retry;
             string celsius;
 
             Console.WriteLine("you wake up and ask your mother: goodMorning mom, how is the weather today? (sunny,rainy or cloudy)");

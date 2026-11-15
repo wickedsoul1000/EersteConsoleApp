@@ -55,7 +55,12 @@
     <Compile Include="..\opdrachten\opdracht4.cs">
       <Link>opdracht4.cs</Link>
     </Compile>
-    <Compile Include="opdracht5.cs" />
+    <Compile Include="..\opdrachten\opdracht5.cs">
+      <Link>opdracht5.cs</Link>
+    </Compile>
+    <Compile Include="..\opdrachten\opdracht6.cs">
+      <Link>opdracht6.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,14 +9,44 @@ namespace main
     public class opdracht6
     {
         public void Start() {
-            random random = new random();
-            int number = random.Next(1,100);
+            int num;
 
-            Console.WriteLine("choose a number between 1 and 100 to gues");
-            int guess = int.Parse(Console.ReadLine());
-          
-            for (int í = guess; guess == number; i++) { 
+            Console.WriteLine("choose a max number to choose from");
+            while (!int.TryParse(Console.ReadLine(), out num))
+            {
+                Console.WriteLine("Please enter a number!");
+
             }
+            int maxNum = num;
+            Random random = new Random();
+            int number = random.Next(maxNum);
+
+            Console.WriteLine($"choose a number between 0 and {maxNum} to guess");
+            int guess = int.Parse(Console.ReadLine());
+
+
+            for (int i = 0; i <= maxNum; i++)
+            {
+                do
+                {
+                    if (guess != number)
+                    {
+                        i++;
+                        Console.WriteLine($"sorry you are wrong try again. you guessed {i} times");
+                        guess = int.Parse(Console.ReadLine());
+                    }
+                    if (guess > number) {
+                        Console.WriteLine("guess lower");
+                    }
+                    if (guess < number) {
+                        Console.WriteLine("guess higher");
+                    }
+                }
+                while (guess != number);
+             
+            }
+            Console.WriteLine("you are correct");
+
         }
     }
 }

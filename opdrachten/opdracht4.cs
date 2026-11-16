@@ -10,17 +10,14 @@ namespace main
     {
         public void Start() {
 
-            Console.WriteLine("whats your birthdate? (DD/MM/YYY)");
+            Console.WriteLine("whats your birthyear? (YYYY)");
             string input = Console.ReadLine();
 
-            if (DateTime.TryParse(input, out DateTime birthdate))
+            if (int.TryParse(input, out int birthYear) &&
+                birthYear > 0 &&
+                birthYear <= DateTime.Now.Year)
             {
-
-                int age = DateTime.Now.Year - birthdate.Year;
-                if (DateTime.Now < birthdate.AddYears(age))
-                {
-                    age--;
-                }
+                int age = DateTime.Now.Year - birthYear;
                 if (!(age >= 18))
                 {
                     Console.WriteLine($"you are {age} years old, sorry but you can't vote");

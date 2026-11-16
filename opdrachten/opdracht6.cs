@@ -20,9 +20,13 @@ namespace main
             int maxNum = num;
             Random random = new Random();
             int number = random.Next(maxNum);
-
+            int guess;
             Console.WriteLine($"choose a number between 0 and {maxNum} to guess");
-            int guess = int.Parse(Console.ReadLine());
+             while (!int.TryParse(Console.ReadLine(), out guess))
+            {
+                Console.WriteLine("Please enter a number!");
+
+            }
 
 
             for (int i = 0; i <= maxNum; i++)

@@ -13,7 +13,7 @@ namespace main
         {
 
             string weather;
-            string celsius;
+            string temperatureOutsideInCelsius;
 
             Console.WriteLine("you wake up and ask your mother: goodMorning mom, how is the weather today? (sunny,rainy or cloudy)");
             weather = (Console.ReadLine() ?? "").Trim().ToLower();
@@ -40,12 +40,12 @@ namespace main
             {
                 Console.WriteLine("ooh cool, and what is the tempeture? (in celsius you can just put the number(s) )");
                 int temp;
-                celsius = Console.ReadLine();
+                temperatureOutsideInCelsius = Console.ReadLine();
 
-                while (!int.TryParse(celsius, out temp))
+                while (!int.TryParse(temperatureOutsideInCelsius, out temp))
                 {
                     Console.WriteLine("temp has to be a number, try again");
-                    celsius = Console.ReadLine();
+                    temperatureOutsideInCelsius = Console.ReadLine();
                 }
 
                 if (temp >= 20)

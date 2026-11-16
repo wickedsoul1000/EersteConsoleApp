@@ -16,43 +16,46 @@ namespace main
             string celsius;
 
             Console.WriteLine("you wake up and ask your mother: goodMorning mom, how is the weather today? (sunny,rainy or cloudy)");
-            weather = Console.ReadLine().ToLower();
+            weather = (Console.ReadLine() ?? "").Trim().ToLower();
 
-            do
+            while (weather != "sunny" && weather != "rainy" && weather != "cloudy")
             {
-                if (weather != "sunny" || weather != "rainy" || weather != "cloudy") {
-                    Console.WriteLine("choose between the given weather choises");
-                    return;
-                }
+                Console.WriteLine("Please choose sunny, rainy, or cloudy.");
+                weather = (Console.ReadLine() ?? "").Trim().ToLower();
             }
-            while (weather != "sunny" || weather != "rainy" || weather != "cloudy");
 
             Console.WriteLine($"its {weather} today");
 
-            if (weather == "rainy" ) {
+            if (weather == "rainy")
+            {
                 Console.WriteLine("aahh i have to wear a jacket outside...");
-                return;
+                
             }
 
-            if (weather == "cloudy") {  
+            if (weather == "cloudy")
+            {
                 Console.WriteLine("to bad i have to wear a jacket in this sad weather...");
             }
-            if (weather == "sunny") {
+            if (weather == "sunny")
+            {
                 Console.WriteLine("ooh cool, and what is the tempeture? (in celsius you can just put the number(s) )");
                 int temp;
                 celsius = Console.ReadLine();
 
-                while (!int.TryParse(celsius, out temp)) {
+                while (!int.TryParse(celsius, out temp))
+                {
                     Console.WriteLine("temp has to be a number, try again");
                     celsius = Console.ReadLine();
                 }
 
-                if (temp >= 20) {
+                if (temp >= 20)
+                {
                     Console.WriteLine("its nice and warm don't forget sunscreen");
                     return;
                 }
 
-                else if (temp <20) {
+                else
+                {
                     Console.WriteLine("oh you still need to put a jacked on but dont forget sunscreen, to be sure you know?");
                     return;
                 }

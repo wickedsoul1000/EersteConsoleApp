@@ -10,30 +10,31 @@ namespace main
     {
         public void Start() {
             int highest = 0;
-            int mostRoll = 0;
-            int maxNum = 100;
+            int maxNum = 6;
+            int mostRolled = 0;
+            int totalRolls = 100;
+
             int[] numbers = new int[maxNum + 1];
             Random random = new Random();
 
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < totalRolls; i++) {
                 int randomNum = random.Next(maxNum + 1);
-
-                Console.WriteLine(randomNum);
 
                 numbers[randomNum]++;
             }
 
-            //showing the results
+            //showing results
             for (int i = 1; i <= maxNum; i++) {
-                if (numbers[i] > highest) {
-                    highest = numbers[i];
-                    mostRoll = i;
-                }
-                double percentage = (double)numbers[i] / 100 * 100;
+                double percentage = (double)6 / 100 * numbers[i];
                 Console.WriteLine($"numbers {i} appeared {numbers[i]} times ");
                 Console.WriteLine($"Number {i}: {percentage}%");
+
+                if (numbers[i] > highest) {
+                    highest = numbers[i];
+                    mostRolled = i;
+                }
             }
-            Console.WriteLine($"most roll = {highest}");
+            Console.WriteLine($"most roll = {mostRolled}");
         }
     }
 }

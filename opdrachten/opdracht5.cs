@@ -9,13 +9,27 @@ namespace main
     public class opdracht5
     {
         public void Start() {
-            Console.WriteLine("Choose your first number");
-            int num1 = int.Parse(Console.ReadLine());
+            string input = "";
+            string inputNum = "";
 
-            Console.WriteLine("Choose your second number");
-            int num2 = int.Parse(Console.ReadLine());
-            int result = num1 * num2;
-            Console.WriteLine($"{num1} * {num2} = {result}");
+            Console.WriteLine("Choose the table you want to use");
+
+            input = Console.ReadLine();
+            if ((int.TryParse(input, out int table))) {
+                Console.WriteLine("type a number");
+            }
+
+                Console.WriteLine("Choose to how much you want to go");
+                inputNum = Console.ReadLine();
+                if (int.TryParse(inputNum, out int num))
+                {
+                    Console.WriteLine("type a number");
+                }
+
+                for (num = 0; num <= table; num++)
+                {
+                    Console.WriteLine($"{table} x {num} = {table * num}");
+                }
+                }
+            }
         }
-    }
-}

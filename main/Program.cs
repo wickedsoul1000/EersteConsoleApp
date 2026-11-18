@@ -11,11 +11,11 @@ namespace main
         static void Main(string[] args)
         {
             //new opdracht1().Start();
-            //new opdracht2().Start();
+            new opdracht2().Start();
             //new opdracht3().Start();
             //new opdracht4().Start();
             //new opdracht5().Start();
-            new opdracht6().Start();
+            //new opdracht6().Start();
             //new opdracht7().Start();
             //new opdracht8().Start();
 

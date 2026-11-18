@@ -44,32 +44,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\opdrachten\opdracht2.cs">
-      <Link>opdracht2.cs</Link>
+      <Link>Opdrachten\opdracht2.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht1.cs">
-      <Link>opdracht1.cs</Link>
+      <Link>Opdrachten\opdracht1.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht3.cs">
-      <Link>opdracht3.cs</Link>
+      <Link>Opdrachten\opdracht3.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht4.cs">
-      <Link>opdracht4.cs</Link>
+      <Link>Opdrachten\opdracht4.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht5.cs">
-      <Link>opdracht5.cs</Link>
+      <Link>Opdrachten\opdracht5.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht6.cs">
-      <Link>opdracht6.cs</Link>
+      <Link>Opdrachten\opdracht6.cs</Link>
     </Compile>
     <Compile Include="..\opdrachten\opdracht7.cs">
-      <Link>opdracht7.cs</Link>
+      <Link>Opdrachten\opdracht7.cs</Link>
     </Compile>
-    <Compile Include="opdracht8.cs" />
+    <Compile Include="Opdrachten\opdracht8.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

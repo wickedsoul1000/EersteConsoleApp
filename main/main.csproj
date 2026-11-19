@@ -64,6 +64,7 @@
     <Compile Include="..\opdrachten\opdracht7.cs">
       <Link>Opdrachten\opdracht7.cs</Link>
     </Compile>
+    <Compile Include="opdracht10.cs" />
     <Compile Include="Opdrachten\opdracht9.cs" />
     <Compile Include="Opdrachten\opdracht8.cs" />
     <Compile Include="Opdrachten\player.cs" />

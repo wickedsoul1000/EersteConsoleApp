@@ -64,8 +64,10 @@
     <Compile Include="..\opdrachten\opdracht7.cs">
       <Link>Opdrachten\opdracht7.cs</Link>
     </Compile>
+    <Compile Include="Opdrachten\opdracht9.cs" />
     <Compile Include="Opdrachten\opdracht8.cs" />
     <Compile Include="Opdrachten\player.cs" />
+    <Compile Include="Opdrachten\weapons.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

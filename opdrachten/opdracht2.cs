@@ -12,8 +12,9 @@ internal class opdracht2
         string Choice = "";
         string Choice2 = "";
 
-        string[] rooms = { "bathroom", "living room", "kitchen", "outside door", "game room" };
-        string[] winRooms = { "kitchen", "game room" };
+        string[] rooms = { "bathroom", "living room", "kitchen", "outside door", "game room", "bedroom" };
+        string winRoom1 = "kitchen";
+        string winRoom2 = "game room";
         bool goBack = true;
 
         while (goBack)
@@ -36,10 +37,11 @@ internal class opdracht2
                 continue;
             }
 
-            if (Choice != winRooms[0] && Choice2 == "no")
+            if (Choice != winRoom1 && Choice2 == "no")
             {
                 goBack = false;
                 Console.WriteLine($"you are in the {Choice} you lost");
+                break;
             }
 
             else
@@ -47,16 +49,23 @@ internal class opdracht2
                 goBack = false;
 
             }
+            Console.WriteLine("where do you want to go now? or do you want to go back? (type back to go back)");
+            Choice2 = Console.ReadLine();
+
+            while (Choice2 == "back") {
+                Console.WriteLine("where do you want to go now? or do you want to go back? (type back to go back)");
+                Choice2 = Console.ReadLine();
+
+                if (Choice2 == "back")
+                {
+                    goBack = true;
+                    continue;
+                }
+                else {
+                    goBack = false;
+                }
+            }
         }
-          
-            if (Choice == winRooms[0] || Choice == winRooms[1])
-            {
-                Console.WriteLine("YOU WON");
-            }
-            else
-            {
-                Console.WriteLine("you lost");
-                return;
-            }
+        Console.WriteLine(Choice == winRoom1 && Choice2 == winRoom2 ? "YOU WON": "you lost gg");
         }
     }

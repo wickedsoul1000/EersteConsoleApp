@@ -12,7 +12,7 @@ namespace main
             int highest = 0;
             int maxNum = 6;
             int mostRolled = 0;
-            int totalRolls = 100;
+            int totalRolls = 1000;
 
             int[] numbers = new int[maxNum + 1];
             Random random = new Random();

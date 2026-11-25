@@ -19,7 +19,8 @@ namespace main
             //new opdracht7().Start();
             //new opdracht8().Start();
             //new opdracht9().Start();
-            new opdracht10().Start();
+            //new opdracht10().Start();
+            new opdracht11().Start();
         }
     }
 }

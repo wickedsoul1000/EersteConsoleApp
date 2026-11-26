@@ -11,28 +11,27 @@ namespace main
     internal class opdracht11
     {
         float result;
-        int antwoord;
+        float antwoord;
         float score;
-
-
         public void Start()
         {
+
             Random symbols = new Random();
             Random sommen = new Random();
 
             string[] operators = { "+", "-", "*", "/" };
 
-            for (int looping = 0; looping <= 5; looping++)
+            for (int looping = 0; looping < 5; looping++)
             {
 
-             int nummer1 = sommen.Next(1, 10);
-            int nummer2 = sommen.Next(1, 10);
+             float nummer1 = sommen.Next(1, 11);
+            float nummer2 = sommen.Next(1, 11);
 
                 string selectedOperators = operators[symbols.Next(operators.Length)];
 
 
                 Console.WriteLine($"what is {nummer1} {selectedOperators} {nummer2} =");
-            int.TryParse(Console.ReadLine(), out antwoord);
+            float.TryParse(Console.ReadLine(), out antwoord);
        
                 switch (selectedOperators)
                 {
@@ -75,7 +74,7 @@ namespace main
             }
 
             else {
-                Console.WriteLine($"you have {score} point. You did bad");
+                Console.WriteLine($"you have {score} points. You did bad");
             }
 
         }
